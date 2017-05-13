@@ -1,0 +1,25 @@
+div
+{
+  padding: 10px;
+  background: rgba(255, 0, 0, 0.2);
+}
+
+/*后代选择器是一种选择方式利用空格选择下一代 .a .b*/
+
+/*选中类a一下的所有元素*/
+.a *
+{
+  /*border: 2px solid black;*/
+}
+
+/*从类a中找类b再找类c*/
+.a .b .c
+{
+  /*border: 2px solid black;*/
+}
+
+/*从类a中找类c*/
+.a .c
+{
+  border: 2px solid black;
+}

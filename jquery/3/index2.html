@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="../jquery-3.2.1.min.js" charset="utf-8"></script>
+  <title>Document</title>
+</head>
+<body>
+  <input type="text" id="address" value="请输入邮箱地址">
+  <br><br>
+  <input type="text" id="password" value="请输入邮箱密码">
+  <br><br>
+  <input type="button" value="登录">
+</body>
+<script type="text/javascript">
+  $("#address").focus(
+    function()
+    {
+      // if($(this).val() == "请输入邮箱地址")
+      if($(this).val() == this.defaultValue)
+      {
+        $(this).val("");
+      }
+    }
+  );
+
+  $("#address").blur(
+    function()
+    {
+      if($(this).val() == "")
+      {
+        $(this).val("请输入邮箱地址");
+      }
+    }
+  );
+
+  $("#password").focus(
+    function()
+    {
+      // if($(this).val() == "请输入邮箱密码")
+      if($(this).val() == this.defaultValue)
+      {
+        $(this).val("");
+      }
+    }
+  );
+
+  $("#password").blur(
+    function()
+    {
+      if($(this).val() == "")
+      {
+        $(this).val("请输入邮箱密码");
+      }
+    }
+  );
+
+  // console.log($("#password").siblings());
+  // console.log($("#address").offset().top);
+  // console.log($("input").position().left);
+</script>
+</html>

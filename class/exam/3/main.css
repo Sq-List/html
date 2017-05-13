@@ -1,0 +1,149 @@
+body
+{
+  margin: 0px auto;
+  max-width: 90%;
+  text-align: center;
+}
+
+a:link, a:visited
+{
+  color: #ffffff;
+  text-decoration: none;
+}
+
+header
+{
+  padding: 25px 0;
+  width: 100%;
+  background: rgb(35, 78, 232);
+  text-align: left;
+}
+
+header .font
+{
+  color: #ffffff;
+  margin-left: 10px;
+  font-size: 2.5em;
+}
+
+nav
+{
+  width: 100%;
+  min-height: 50px;
+  float: left;
+  background: rgb(47, 230, 126);
+}
+
+nav ul
+{
+  float: right;
+  margin: 0px;
+  width: 80%;
+  list-style-type: none;
+}
+
+nav ul li
+{
+  float: left;
+  width: 180px;
+  line-height: 50px;
+}
+
+nav ul li a
+{
+  margin: 0 auto;
+  display: block;
+}
+
+nav ul li:hover
+{
+  background: rgb(68, 231, 138);
+}
+
+.aside-left
+{
+  width: 30%;
+  height: 450px;
+  background: #fff;
+  float: left;
+  text-align: center;
+}
+
+.aside-left ul
+{
+  list-style-type: none;
+  width: 50%;
+  float: left;
+  position: relative;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.aside-left ul li
+{
+  margin: 0;
+  padding: 0;
+  float: left;
+
+  width: 100%;
+  height: 40px;
+  line-height: 40px;
+  margin-bottom: 15px;
+  background: rgb(77, 136, 236);
+}
+
+.aside-left ul li a
+{
+  display: block;
+}
+
+.aside-left ul li:hover
+{
+  background: rgb(92, 146, 237);
+}
+
+.aside-right
+{
+  width: 70%;
+  height: 450px;
+  background: rgba(24, 180, 201, 0.28);
+  float: left;
+  display:table-cell;
+  vertical-align: middle;
+}
+
+@media screen and (max-width:980px)
+{
+  .aside-left
+  {
+    width: 100%;
+  }
+  .aside-right
+  {
+    width: 100%;
+  }
+}
+
+.aside-right img
+{
+  position: relative;
+  top: 50%;
+  transform: translate(0, -50%);
+
+  width: 100%;
+  /*max-width: ;*/
+  height: auto;
+}
+
+footer
+{
+  clear: both;
+  width: 100%;
+  height: 100px;
+  background: rgb(25, 54, 242);
+}

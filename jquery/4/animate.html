@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="../jquery-3.2.1.min.js" charset="utf-8"></script>
+  <script type="text/javascript">
+    $(
+      function()
+      {
+        // $("#panel").click
+        // (
+        //   function()
+        //   {
+        //     // $(this).animate({left: "+=500px", height: "200px"}, 3000);
+        //     // $(this).animate({width: "200px"}, 3000);
+        //     $("#panel").css("opacity", "0.5");
+        //     $("#panel").animate({left: "400px", height: "200px", opacity: "1"}, 3000)
+        //       .animate({top: "200px", width: "200px"}, 3000, function()
+        //       {
+        //         $(this).css("border", "5px solid #000000");
+        //       });
+        //   }
+        // )
+
+        $("#panel").hover
+        (
+          function()
+          {
+            $(this).stop()
+              .animate({height: "150px", width: "300px"}, 200);
+          },
+          function()
+          {
+            $(this).stop()
+              .animate({height: "22px", width: "60px"}, 300);
+          }
+        )
+      }
+    )
+  </script>
+  <style media="screen">
+    #panel
+    {
+      position: relative;
+      width: 100px;
+      height: 100px;
+      border: 1px solid #0050D0;
+      background: #96E555;
+      cursor: pointer;
+    }
+  </style>
+  <title>Document</title>
+</head>
+<body>
+  <div id="panel"></div>
+</body>
+</html>

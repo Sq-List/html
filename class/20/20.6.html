@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <script type="text/javascript">
+    var n1 = "321xyz";
+    var n2 = "xyz321";
+
+    document.write("(1)使用parseInt()函数<br>");
+    document.write("321xyz转化结果为：" + parseInt(n1) + "<br>");
+    document.write("xyz321转化结果为：" + parseInt(n2) + "<br>");
+
+    var n3 = "12.3456789xyz";
+    document.write("(2)使用parseFloat()函数<br>");
+    document.write("12.3456789xyz转化结果为:" + parseFloat(n3) + "<br><br>");
+
+    document.write("(3)使用isNaN()函数<br>");
+    document.write("12.3456789xyz转化后是否为NaN：" + isNaN(parseFloat(n3)) + "<br>");
+    document.write("xyz321转化结果是否为NaN：" + isNaN(parseInt(n2)) + "<br><br>");
+
+    document.write("(4)使用isFinite()函数<br>");
+    document.write("1除以0的结果是否为有限值：" + isFinite(1 / 0) + "<br><br>");
+
+    document.write("(5)使用encodeURI()函数<br>");
+    document.write("转化为网络资源地址为：" + encodeURI("http://localhost/save.html?userName=测试用户") + "<br><br>");
+
+    document.write("(5)使用decodeURI()函数<br>");
+    document.write("转化为网络资源地址的字符串为：" + decodeURI(encodeURI("http://localhost/save.html?userName=测试用户")) + "<br><br>");
+  </script>
+</body>
+</html>

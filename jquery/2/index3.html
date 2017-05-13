@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="../jquery-3.2.1.min.js" charset="utf-8"></script>
+  <style media="screen">
+    .SubCategoryBox
+    {
+      width: 75%;
+      margin: 0 auto;
+      text-align: center;
+    }
+    .SubCategoryBox ul
+    {
+      overflow: hidden;
+      list-style: none;
+      margin: 0 auto;
+      padding: 0;
+    }
+
+    .SubCategoryBox ul li
+    {
+      float: left;
+      margin: 15px 150px;
+    }
+
+    .SubCategoryBox ul li a,
+    .showmore a
+    {
+      text-decoration: none;
+      color: black;
+    }
+
+    .showmore
+    {
+      margin-top: 40px;
+      clear: both;
+    }
+
+    .showmore a
+    {
+      padding: 10px;
+      border: 1px #000000 solid;
+    }
+
+    .promoted
+    {
+      color: red  !important;
+      /*font-size: 1.2em;*/
+    }
+  </style>
+  <title>Document</title>
+</head>
+<body>
+  <div class="SubCategoryBox">
+    <ul>
+      <li><a href="#">佳能</a></li>
+      <li><a href="#">索尼</a></li>
+      <li><a href="#">三星</a></li>
+      <li><a href="#">尼康</a></li>
+      <li><a href="#">松下</a></li>
+      <li><a href="#">卡西欧</a></li>
+      <li><a href="#">富士</a></li>
+      <li><a href="#">柯达</a></li>
+      <li><a href="#">宾得</a></li>
+      <li><a href="#">理光</a></li>
+      <li><a href="#">奥林巴斯</a></li>
+      <li><a href="#">明基</a></li>
+      <li><a href="#">爱国者</a></li>
+      <li><a href="#">其他品牌相机</a></li>
+    </ul>
+    <div class="showmore">
+      <a href="more.html">显示全部品牌</a>
+    </div>
+  </div>
+</body>
+<script type="text/javascript">
+  $(function()
+  {
+    var $category = $("ul li:gt(5):not(:last)");
+
+    $category.hide();
+    var $toggleBtn = $("div.showmore > a");
+    $toggleBtn.click(function()
+    {
+      if ($category.is(":visible"))
+      {
+        $category.hide();
+        $(this).text("显示全部品牌");
+        $("ul li a").removeClass("promoted");
+      }
+      else
+      {
+        $category.show();
+        $(this).text("精简显示品牌");
+        $("ul li a").filter(":contains('佳能'), :contains('尼康'), :contains('奥林巴斯')")
+          .addClass("promoted");
+      }
+
+      return false;
+    });
+  });
+</script>
+</html>

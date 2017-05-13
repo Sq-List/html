@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script type="text/javascript">
+    function setArgValue(n1, n2, n3)
+    {
+      var avg = (n1 + n2 + n3) / 3;
+      return avg;
+    }
+
+    function getValue(n1, n2, n3)
+    {
+      document.writeln("参数分别为" + n1 + ", " + n2 + ", " + n3 + "<br>");
+      var value = setArgValue(n1, n2, n3);
+
+      document.write("取参数平均值，未精确小数点运行结果为：" + value + "<br>");
+      document.write("取参数平均值，精确两位小数点后运行结果为：" + value.toFixed(2) + "<br>");
+    }
+  </script>
+  <title>Document</title>
+</head>
+<body>
+  <script type="text/javascript">
+    getValue(80, 89, 99);
+  </script>
+</body>
+</html>

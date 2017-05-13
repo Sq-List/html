@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="../jquery-3.2.1.min.js" charset="utf-8"></script>
+  <script type="text/javascript">
+    $(
+      function()
+      {
+        $("span").click
+        (
+          function()
+          {
+            var txt = $("#msg").html() + "<p>内层span元素被单击</p>";
+            $("#msg").html(txt);
+            return false;
+          }
+        )
+
+        $("#content").click
+        (
+          function()
+          {
+            var txt = $("#msg").html() + "<p>外层div元素被单击</p>";
+            $("#msg").html(txt);
+            return false;
+          }
+        )
+
+        $("body").click
+        (
+          function()
+          {
+            var txt = $("#msg").html() + "<p>body元素被单击</p>";
+            $("#msg").html(txt);
+            return false;
+          }
+        )
+      }
+    )
+  </script>
+  <title>Document</title>
+</head>
+<body>
+  <div id="content">
+    外层div元素 <br>
+    <span>内层span元素</span><br>
+    外层div元素
+  </div>
+  <div id="msg"></div>
+</body>
+</html>

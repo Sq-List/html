@@ -1,0 +1,15 @@
+h1, h2, h3
+{
+  color: gray;
+  background: black;
+}
+
+h1
+{
+  border: 3px solid green;
+}
+
+h2, h3
+{
+  border: 2px solid red;
+}

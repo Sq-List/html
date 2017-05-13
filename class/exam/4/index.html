@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="main.css">
+  <title>Document</title>
+</head>
+<body>
+  <div class="content">
+    <header></header>
+    <div class="aside">
+      <div class="aside-left"></div>
+      <div class="aside-right">
+        <div class="top">
+          <img id="img" src="./1.jpg" alt="">
+        </div>
+        <div class="bottom">
+          <ul>
+            <li onclick="fun(this)">1</li>
+            <li onclick="fun(this)">2</li>
+            <li onclick="fun(this)">3</li>
+            <li onclick="fun(this)">4</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <footer></footer>
+  </div>
+</body>
+<script type="text/javascript">
+  function fun(obj)
+  {
+    var array = document.getElementsByTagName("li");
+    for (var i = 0; i < array.length; i++)
+    {
+      array[i].style.background = "rgb(188, 29, 214)";
+      array[i].style.color = "#ffffff";
+      if (obj != array[i])
+      {
+        array[i].onmouseenter = function() {mouseEnter(this)};
+        array[i].onmouseleave = function() {mouseLeave(this)};
+      }
+    }
+    obj.style.background = "#ffffff";
+    obj.style.color = "#000000";
+    document.getElementById("img").src = "./" + obj.innerHTML + ".jpg";
+  }
+
+  function mouseEnter(obj)
+  {
+    obj.style.color = "#000000";
+    obj.style.background = "#ffffff";
+  }
+
+  function mouseLeave(obj)
+  {
+    obj.style.color = "#ffffff";
+    obj.style.background = "rgb(188, 29, 214)";
+  }
+</script>
+</html>

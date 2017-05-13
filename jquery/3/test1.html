@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="../jquery-3.2.1.min.js" charset="utf-8"></script>
+  <title>Document</title>
+</head>
+<body>
+  <p><a href="#" class="tooltip" title="My提示1">提示1</a></p>
+  <p><a href="#" class="tooltip" title="My提示2">提示2</a></p>
+  <p><a href="#" title="自带提示1">自带提示1</a></p>
+  <p><a href="#" title="自带提示2">自带提示2</a></p>
+</body>
+<script type="text/javascript">
+  $(
+    function()
+    {
+      $("a.tooltip").mouseover
+      (
+        function(e)
+        {
+          this.myTitle = this.title;
+          this.title = "";
+          var tooltip = "<div id='tooltip'>" + this.myTitle + "</div>";
+          $("body").append(tooltip);
+          $("#tooltip").css
+          (
+            {
+              "position" : "absolute",
+              "top" : (e.pageY + 10) + "px",
+              "left" : (e.pageX + 10) + "px"
+            }
+          ).show("fast");
+        }
+      )
+      .mouseout
+      (
+        function()
+        {
+          this.title = this.myTitle;
+          $("#tooltip").remove();
+        }
+      )
+      .mousemove
+      (
+        function(e)
+        {
+          $("#tooltip").css
+          (
+            {
+              "top" : (e.pageY + 10) + "px",
+              "left" : (e.pageX + 10) + "px"
+            }
+          )
+        }
+      )
+    }
+  )
+</script>
+</html>

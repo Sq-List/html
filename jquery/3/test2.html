@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="../jquery-3.2.1.min.js" charset="utf-8"></script>
+  <style media="screen">
+
+    body
+    {
+      width: 90%;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    li
+    {
+      float: left;
+      list-style-type: none;
+      margin: 10px;
+    }
+
+    li a > img
+    {
+      width: 300px;
+      height: 300px;
+    }
+
+    .tooltip
+    {
+      /*float: left;*/
+    }
+  </style>
+  <title>Document</title>
+</head>
+<body>
+  <ul>
+    <li>
+      <a href="img/chrome.jpg" class="tooltip" title="chrome">
+        <img src="img/chrome.jpg" alt="chrome">
+      </a>
+    </li>
+    <li>
+      <a href="img/firefox.jpg" class="tooltip" title="firefox">
+        <img src="img/firefox.jpg" alt="firefox">
+      </a>
+    </li>
+    <li>
+      <a href="img/safari.jpg" class="tooltip" title="safari">
+        <img src="img/safari.jpg" alt="safari">
+      </a>
+    </li>
+    <li>
+      <a href="img/360极速.jpg" class="tooltip" title="360极速">
+        <img src="img/360极速.jpg" alt="360极速">
+      </a>
+    </li>
+  </ul>
+</body>
+<script type="text/javascript">
+  $(
+    function()
+    {
+      var x = 10;
+      var y = 20;
+
+      $(".tooltip").mouseover
+      (
+        function(e)
+        {
+          this.mytitle = this.title;
+          this.title = "";
+
+          var imgTitle = this.mytitle?this.title : "";
+          var tooltip = "<div id='tooltip'><img src='" + this.href + "' alt='产品预览图'/>" + imgTitle + "</div>";
+          $("body").append(tooltip);
+          $("#tooltip").css
+          (
+            {
+              "position" : "absolute",
+              "top" : (e.pageY + x) + "px",
+              "left" : (e.pageX + y) + "px"
+            }
+          )
+          .children("img").css
+          (
+            {
+              "width" : 300,
+              "height" : 300
+            }
+          )
+          .show("fast");
+        }
+      )
+      .mouseout
+      (
+        function()
+        {
+          this.title = this.mytitle;
+          $("#tooltip").remove();
+        }
+      )
+      .mousemove
+      (
+        function(e)
+        {
+          $("#tooltip").css
+          (
+            {
+              "top" : (e.pageY + x) + "px",
+              "left" : (e.pageX + y) + "px"
+            }
+          )
+          .children("img").css
+          (
+            {
+              "width" : 300,
+              "height" : 300
+            }
+          )
+        }
+      )
+    }
+  );
+</script>
+</html>
