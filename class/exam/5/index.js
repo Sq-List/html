@@ -16,6 +16,19 @@ window.onload = function()
   imgRoll();
 }
 
+window.onresize = function()
+{
+  contentWidth = document.body.clientWidth * 0.9;
+  for(i = 0; i < 4; i++)
+  {
+    var liImg = picLi[i].getElementsByTagName("img")[0];
+    liImg.style.width = (contentWidth * 0.9) + "px";
+    liImg.src = imgArr[i];
+  }
+  picUl.style.width = contentWidth * 0.9 * 4 + "px";
+  picUl.style.left = -(contentWidth * imgIndex * 0.9) + "px";
+}
+
 left1.onmouseover = function()
 {
   menu.style.display = "block";
