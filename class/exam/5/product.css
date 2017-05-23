@@ -28,6 +28,18 @@
   text-align: center;
 }
 
+.content #product #product-menu .row .body #brand li
+{
+  cursor: pointer;
+
+  transition: color 0.2s;
+}
+
+.content #product #product-menu .row .body #brand li:hover
+{
+  color:rgb(0,168,230);
+}
+
 .content #product #product-menu .row .body ul
 {
   float: left;
@@ -61,6 +73,8 @@
   background: #ffffff;
 
   float: left;
+
+  transition: box-shadow 0.5s;
 }
 
 .content #product #product-details .product-single:hover
