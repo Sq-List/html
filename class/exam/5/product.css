@@ -55,14 +55,14 @@
   margin-right: 50px;
 }
 
-.content #product #product-details
+.content #product product-list
 {
   width: 100%;
   height: 500px;
   margin: 50px auto;
 }
 
-.content #product #product-details .product-single
+.content #product #product-list .product-single
 {
   text-align: center;
 
@@ -77,12 +77,12 @@
   transition: box-shadow 0.5s;
 }
 
-.content #product #product-details .product-single:hover
+.content #product #product-list .product-single:hover
 {
   box-shadow: 5px 5px 10px rgb(193, 196, 188);
 }
 
-.content #product #product-details .product-single img
+.content #product #product-list .product-single img
 {
   width: 300px;
   height: 300px;

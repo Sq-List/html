@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <style media="screen">
+    *, *:before, *:after
+    {
+      -moz-box-sizing: border-box;
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box;
+    }
+
+    #product-number
+    {
+      overflow: hidden;
+      float: left;
+      margin-top: 50px;
+      margin-left: 50px;
+      margin-right: 10px;
+
+      position: relative;
+      top: 50%;
+      transform: translate(0, -50%);
+    }
+
+    #product-number div
+    {
+      background: #ffffff;
+      line-height: 28px;
+      padding: 0 6px;
+      border: none;
+      border: 1px solid gray;
+      float: left;
+      cursor: pointer;
+    }
+
+    #product-number #jian
+    {
+      border-top-left-radius: 8px;
+      border-bottom-left-radius: 8px;
+      border-right: none;
+    }
+
+    #product-number #jia
+    {
+      border-top-right-radius: 8px;
+      border-bottom-right-radius: 8px;
+      border-left: none;
+    }
+
+    #product-number input[type='text']
+    {
+      float: left;
+      height: 30px;
+      text-align: center;
+      margin: 0;
+      padding: 0;
+      border: none;
+      border-top: 1px solid gray;
+      border-bottom: 1px solid gray;
+      outline: none;
+    }
+  </style>
+  <title>Document</title>
+</head>
+<body>
+  <div id="product-number">
+    <div id="jian" style="color:gray">-</div>
+    <input type="text" name="number" id="number" value="1" size="4">
+    <div id="jia">+</div>
+  </div>
+</body>
+<script type="text/javascript">
+  document.getElementById("jia").onclick = function()
+  {
+    var number = document.getElementById("number");
+    var numberValue = Number(number.value);
+    numberValue++;
+    number.value = numberValue;
+
+    if(numberValue > 1)
+    {
+      document.getElementById("jian").style.color = "#000000";
+    }
+  }
+
+  document.getElementById("jian").onclick = function()
+  {
+    var number = document.getElementById("number");
+    var numberValue = Number(number.value);
+    numberValue--;
+    number.value = numberValue;
+
+    if(numberValue <= 1)
+    {
+      number.value = "1";
+      this.style.color = "gray";
+      return ;
+    }
+  }
+</script>
+</html>
