@@ -1,0 +1,31 @@
+.box1
+{
+  margin: 0 auto;
+
+  /*1、修改父元素的高度，增加padding-top样式模拟（padding-top：1px；常用） */
+  /*padding-top: 1px;*/
+
+  /*2、为父元素添加overflow：hidden；样式即可（完美） */
+  overflow: hidden;
+
+  /*3、为父元素或者子元素声明浮动（float：left；可用） */
+  /*float: left;*/
+
+  /*4、为父元素添加border（border:1px solid transparent可用） */
+  /*border: 1px solid gray;*/
+
+  /*5、为父元素或者子元素声明绝对定位*/
+  /*position: absolute;*/
+
+  height:200px;
+  width:200px;
+  background:gray;
+}
+
+.box2
+{
+  height:100px;
+  width:100px;
+  background:gold;
+  margin-top:50px;
+}

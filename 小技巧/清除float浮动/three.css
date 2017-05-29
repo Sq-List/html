@@ -1,0 +1,11 @@
+/*父级div定义overflow:hidden - 推荐*/
+/*为什么加入overflow:hidden即可清除浮动呢？
+那是因为overflow:hidden属性
+相当于是让父级紧贴内容，
+这样即可紧贴其对象内内容
+（包括使用float的div盒子），
+从而实现了清除浮动。*/
+.main
+{
+  overflow: hidden;
+}
