@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <a href="#2">去2</a>
+  <div id="1" style="height : 1000px;">
+    11111111
+  </div>
+  <div id="2" style="height : 1000px;">
+    2222222222
+  </div>
+</body>
+<script src="../../jquery/jquery-3.2.1.min.js" charset="utf-8"></script>
+<script type="text/javascript">
+$('a').click(function(){
+  $('html, body').animate({
+      scrollTop: $( $(this).attr('href') ).offset().top
+  }, 500);
+  return false;
+});
+</script>
+</html>

@@ -2,7 +2,7 @@
 
 // window.onload = setImg();
 
-var productDetails = document.getElementById("product-details");
+var productDetails = document.getElementById("product-list");
 for(i = 0; i < productList.length; i++)
 {
   setImg(productList[i].url);
