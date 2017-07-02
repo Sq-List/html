@@ -18,14 +18,70 @@
 
 .content #product-detail #product-body #product-img
 {
-  width: 40%;
+  margin-right: 10px;
+  height: 450px;
+  width: 510px;
   float: left;
+  text-align: center;
+}
+
+.content #product-detail #product-body #product-img #product-img-scoll
+{
+  margin: 0;
+  overflow: hidden;
+  width: 450px;
+  float: left;
+}
+
+.content #product-detail #product-body #product-img #product-img-scoll #product-img-scoll-together
+{
+  overflow: hidden;
+  position: relative;
+  left: 0;
+
+  transition: left 1.5s ease;
+}
+
+.content #product-detail #product-body #product-img #product-img-scoll #product-img-scoll-together img
+{
+  float: left;
+}
+
+.content #product-detail #product-body #product-img .id
+{
+  float: left;
+  width: 0;
+  height: 0;
+  border-top: 30px solid transparent;
+  border-bottom: 30px solid transparent;
+
+  opacity: 0.3;
+  transition: opacity 0.5s;
+
+  position: relative;
+  top: 50%;
+  transform: translate(0, -50%);
+}
+
+.content #product-detail #product-body #product-img .id:hover
+{
+  opacity: 1;
+}
+
+.content #product-detail #product-body #product-img .id:nth-child(1)
+{
+  border-right: 30px solid gray;
+}
+
+.content #product-detail #product-body #product-img .id:nth-child(3)
+{
+  border-left: 30px solid gray;
 }
 
 .content #product-detail #product-body #product-content
 {
   height: 100%;
-  width: 60%;
+  width: 51%;
   float: left;
 }
 

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script type="text/javascript">
+    let Handler = {
+      methodSet :
+      {
+        MessageA : function(obj)
+        {
+          console.log("MssageA");
+          console.log(obj.text);
+        },
+        MessageB : function(obj)
+        {
+          console.log("MessageB");
+        }
+      },
+
+      handle : function(obj)
+      {
+        console.log(this.methodSet);
+        if(this.methodSet[obj.messageClass])
+        {
+          return this.methodSet[obj.messageClass](obj.message);
+        }
+        else
+        {
+          console.log("Error");
+        }
+      },
+
+      addHeadle : function(name, fun)
+      {
+        this.methodSet[name] = fun;
+      }
+    };
+
+    let myMsg1 =
+    {
+      messageClass : "MessageC",
+      message:
+      {
+        text:"Hellod World!"
+      }
+    };
+
+    Handler.addHeadle("MessageC", function(obj) {
+      console.log(obj.text);
+      return 666;
+    });
+
+    Handler.handle(myMsg1);
+  </script>
+  <title>Document</title>
+</head>
+<body>
+
+</body>
+</html>
