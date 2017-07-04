@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <table>
+            <thead>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Sex</th>
+            </thead>
+            <tbody>
+                <!-- v-for 指令需要以 item in items 形式的特殊语法， items 是源数据数组并且 item 是数组元素迭代的别名。 -->
+                <!-- v-for 可以通过一个对象的属性来迭代数据 -->
+                <!-- 也可以提供第二个的参数为键名 -->
+                <!-- 也可以第三个参数为索引 -->
+                <tr v-for="person in people">
+                    <td>{{ person.name }}</td>
+                    <td>{{ person.age }}</td>
+                    <td>{{ person.sex }}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+<script src="../vue.js" charset="utf-8"></script>
+<script type="text/javascript">
+    var vm = new Vue(
+        {
+            el: "#app",
+            data:
+            {
+                people:
+                [
+                    {
+                        name: 'Jack',
+                        age: 30,
+                        sex: 'Male'
+                    },
+                    {
+                        name: 'Bill',
+                        age: 26,
+                        sex: 'Male'
+                    },
+                    {
+                        name: 'Tracy',
+                        age: 22,
+                        sex: 'Female'
+                    },
+                    {
+                        name: 'Chris',
+                        age: 36,
+                        sex: 'Male'
+                    }
+                ]
+            }
+        }
+    )
+</script>
+</html>
