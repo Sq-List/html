@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>7.2</title>
+</head>
+<body>
+  <h1>滚动字幕</h1>
+  <marquee behavior="scroll" direction="up">
+    往复滚动（默认）
+  </marquee>
+  <marquee behavior="slide" direction="down">
+    一次滚动
+  </marquee><br>
+  <marquee behavior="alternate" direction="left">
+    循环交替往返滚动
+  </marquee>
+  <br><br><br><br>
+
+  <marquee behavior="scroll" direction="left" scrollamount="6">
+    以速度6从右向左滚动
+  </marquee>
+  <marquee behavior="scroll" direction="right" scrollamount="3">
+    以速度3从左向右滚动
+  </marquee>
+  <marquee behavior="scroll" direction="left" scrollamount="10" scrolldelay="100">
+    以速度10从右向左滚动，每次滚动延迟时间100ms
+  </marquee>
+  <marquee behavior="scorll" direction="right" scrollamount="15" scrolldelay="190">
+    以速度15从左向右滚动，每次滚动延迟190ms
+  </marquee>
+  <br><br><br><br>
+
+  <marquee behavior="scorll" direction="left" bgcolor="red" width="500px" height="100px">
+    以默认速度在100px*100px红色范围从右向左内滚动
+  </marquee>
+  <marquee behavior="scorll" direction="up" bgcolor="red" width="500px" height="100px">
+    以默认速度在100px*100px红色范围从下向上内滚动
+  </marquee>
+  <br><br><br><br>
+
+  <marquee behavior="" direction="right" bgcolor="red" hspace="10px" scrollamount="15px">
+    滚动区域与周围对象的水平距离为10px 垂直距离为50px
+  </marquee>
+  <marquee behavior="" direction="right" bgcolor="red" vspace="15px" scrollamount="15px">
+    滚动区域与周围对象的水平距离为15px 垂直距离为50px
+  </marquee>
+
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <my-component v-bind:my-name="name" v-bind:my-age="age"></my-component>
+    </div>
+
+    <template id="myComponent">
+        <table>
+            <tr>
+                <th colspan="2">
+                    子组件数据
+                </th>
+            </tr>
+            <tr>
+                <td>my name</td>
+                <td>{{ myName }}</td>
+            </tr>
+            <tr>
+                <td>my age</td>
+                <td>{{ myAge }}</td>
+            </tr>
+        </table>
+    </template>
+</body>
+<script src="../vue.js" charset="utf-8"></script>
+<script type="text/javascript">
+    /**
+    在父组件中使用子组件时，通过以下语法将数据传递给子组件：
+    <child-component v-bind:子组件prop="父组件数据属性"></child-component>
+    */
+
+    var vm = new Vue(
+        {
+            el: "#app",
+            data:
+            {
+                name: 'sqlist',
+                age: 20
+            },
+            components:
+            {
+                'my-component':
+                {
+                    template: '#myComponent',
+                    props: ['myName', 'myAge']
+                }
+            }
+        }
+    )
+</script>
+</html>

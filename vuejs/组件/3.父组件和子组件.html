@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <parent-component></parent-component>
+    </div>
+</body>
+<script src="../vue.js" charset="utf-8"></script>
+<script type="text/javascript">
+    /**
+    子组件只能在父组件的template中使用
+    */
+
+    // 定义了一个child组件
+    var child = Vue.extend(
+        {
+            template: '<p>This is a child component!</p>'
+        }
+    )
+
+    // 定义了一个parent组件
+    var parent = Vue.extend(
+        {
+            // 在parent组件内使用<child-component>标签
+            template: '<div><p>This is a Parent component</p><child-component></child-component></div>',
+
+            components:
+            {
+                // 局部注册组件，该组件只能在parent组件内使用
+                'child-component': child
+            }
+        }
+    )
+
+    // 全局注册parent组件
+    Vue.component('parent-component', parent);
+
+    new Vue(
+        {
+            el: "#app"
+        }
+    )
+</script>
+</html>

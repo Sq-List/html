@@ -1,0 +1,55 @@
+/*属性选择器 用[]来选定*/
+[title]
+{
+  color: red;
+  border: 1px dashed #000;
+}
+
+/*根据准确属性来选定[title="点击此处登录"]*/
+[title="点击此处登录"]
+{
+  color: green;
+  border: 2px solid rgb(89, 255, 0);
+}
+
+/*根据属性包含的关键字来选定[title*="点击"]*/
+[title*="点击"]
+{
+  color: rgb(184, 71, 121);
+  border: 3px dashed rgb(0, 26, 255);
+}
+
+/*根据属性以那几个字开始来选定[title^="点击"]*/
+[title^="点击"]
+{
+  color: rgb(208, 68, 164);
+  border: 4px solid rgb(164, 44, 59);
+}
+
+/*根据属性以那几个字结尾来选定[title$="淘宝"]*/
+[title$="淘宝"]
+{
+  color: rgb(131, 210, 184);
+  border: 5px dashed rgb(130, 59, 129);
+}
+
+a[href]
+{
+  color: red;
+}
+
+a[href^="http://abc.com"]
+{
+  color: blue;
+}
+
+.button, input[type="submit"]
+{
+  border: 0;
+}
+
+input[type="text"]
+{
+  width: 100%;
+  padding: 5px;
+}

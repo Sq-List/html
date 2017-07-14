@@ -1,0 +1,215 @@
+.content #product-detail
+{
+  width: 85%;
+  height: 500px;
+  margin: 0 auto;
+}
+
+.content #product-detail #classifieds
+{
+  font-size: 0.8em;
+}
+
+.content #product-detail #product-body
+{
+  margin-top: 15px;
+  overflow: hidden;
+}
+
+.content #product-detail #product-body #product-img
+{
+  margin-right: 10px;
+  height: 450px;
+  width: 510px;
+  float: left;
+  text-align: center;
+}
+
+.content #product-detail #product-body #product-img #product-img-scoll
+{
+  margin: 0;
+  overflow: hidden;
+  width: 450px;
+  float: left;
+}
+
+.content #product-detail #product-body #product-img #product-img-scoll #product-img-scoll-together
+{
+  overflow: hidden;
+  position: relative;
+  left: 0;
+
+  transition: left 1.5s ease;
+}
+
+.content #product-detail #product-body #product-img #product-img-scoll #product-img-scoll-together img
+{
+  float: left;
+}
+
+.content #product-detail #product-body #product-img .id
+{
+  float: left;
+  width: 0;
+  height: 0;
+  border-top: 30px solid transparent;
+  border-bottom: 30px solid transparent;
+
+  opacity: 0.3;
+  transition: opacity 0.5s;
+
+  position: relative;
+  top: 50%;
+  transform: translate(0, -50%);
+}
+
+.content #product-detail #product-body #product-img .id:hover
+{
+  opacity: 1;
+}
+
+.content #product-detail #product-body #product-img .id:nth-child(1)
+{
+  border-right: 30px solid gray;
+}
+
+.content #product-detail #product-body #product-img .id:nth-child(3)
+{
+  border-left: 30px solid gray;
+}
+
+.content #product-detail #product-body #product-content
+{
+  height: 100%;
+  width: 51%;
+  float: left;
+}
+
+.content #product-detail #product-body #product-content #product-title
+{
+  margin-top: 10px;
+}
+
+.content #product-detail #product-body #product-content #product-title span
+{
+  font-size: 1.8em;
+}
+
+.content #product-detail #product-body #product-content #product-introduction
+{
+
+}
+
+.content #product-detail #product-body #product-content #product-introduction span
+{
+  font-size: 0.8em;
+  color: gray;
+}
+
+.content #product-detail #product-body #product-content #product-price
+{
+  font-size: 1.5em;
+  margin-top: 15px;
+  color: red;
+}
+
+.content #product-detail #product-body #product-content #product-price::before
+{
+  content: "￥";
+}
+
+.content #product-detail #product-body #product-content #product-attritube
+{
+  margin-top: 15px;
+}
+
+.content #product-detail #product-body #product-content #product-attritube .product-attritube-detail
+{
+  height: 50px;
+}
+
+.content #product-detail #product-body #product-content #product-attritube .product-attritube-detail span
+{
+  display: inline-block;
+  width: 100px;
+}
+
+.content #product-detail #product-body #product-content #product-buy
+{
+  margin: 20px;
+  height: 40px;
+}
+
+.content #product-detail #product-body #product-content #product-buy #product-number
+{
+  overflow: hidden;
+  float: left;
+  margin-right: 10px;
+
+  position: relative;
+  top: 50%;
+  transform: translate(0, -50%);
+}
+
+.content #product-detail #product-body #product-content #product-buy #product-number div
+{
+  background: #ffffff;
+  line-height: 28px;
+  padding: 0 6px;
+  border: none;
+  border: 1px solid gray;
+  float: left;
+  cursor: pointer;
+}
+
+.content #product-detail #product-body #product-content #product-buy #product-number #jian
+{
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+  border-right: none;
+}
+
+.content #product-detail #product-body #product-content #product-buy #product-number #jia
+{
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+  border-left: none;
+}
+
+.content #product-detail #product-body #product-content #product-buy #product-number input[type='text']
+{
+  float: left;
+  height: 30px;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  border: none;
+  border-top: 1px solid gray;
+  border-bottom: 1px solid gray;
+  outline: none;
+}
+
+
+
+
+.product-button
+{
+  margin: 0;
+  margin-left: 5px;
+  width: 150px;
+  height: 40px;
+  background: #ffffff;
+  cursor: pointer;
+  border: 1px solid gray;
+  border-radius: 10px;
+}
+
+.red-background
+{
+  background: red;
+}
+
+.green-background
+{
+  background: green;
+}

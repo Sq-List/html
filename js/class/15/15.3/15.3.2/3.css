@@ -1,0 +1,18 @@
+.father
+{
+  background: #fffebb;
+  text-align: center;
+  font-family: Arial, Helvetica;
+  font-size: 20px;
+  padding: 10px;
+  border: 1px solid #000000;
+}
+
+.son
+{
+  background: #a2d2ff;
+  margin-top: 30px;
+  margin-bottom: 0px;
+  padding: 15px;
+  border: 1px dashed #004993;
+}

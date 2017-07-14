@@ -1,0 +1,32 @@
+/*link代表没有访问过的连接*/
+/*a:link在a中没有访问过的*/
+a:link
+{
+  color: blue;
+}
+
+/*visited代表访问过的*/
+a:visited
+{
+  color: gray;
+}
+
+/*hover在鼠标悬停时*/
+button:hover, a:hover
+{
+  background: #888;
+}
+
+/*active在鼠标按下时*/
+button:active, a:active
+{
+  background: #333;
+  color: #fff;
+}
+
+/*focus输入框焦点激活*/
+input:focus
+{
+  outline: none;
+  background: gray;
+}

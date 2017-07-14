@@ -1,0 +1,119 @@
+body
+{
+  padding: 0px;
+  margin: 0px;
+}
+
+#paimai
+{
+  margin: 0 auto;
+  width: 20%;
+  line-height: 50px;
+  text-align: center;
+  background: #ffffff;
+
+  display: none;
+
+  position: absolute;
+  left: 50%;
+  top: 30%;
+  transform: translate(-50%);
+}
+
+#paimai #tishi
+{
+  position: absolute;
+  left: 50%;
+  line-height: 5px;
+  font-size: 5px;
+  color: red;
+
+  display: none;
+}
+
+#paimai div
+{
+  margin-left: 20px;
+  float: left;
+}
+
+#paimai #close
+{
+  position: relative;
+  right: 5px;
+}
+
+#paimai input[type="button"]
+{
+  margin: 0 10px;
+  width: 30%;
+  background: blue;
+  border: 0;
+}
+
+.content
+{
+  margin: 0 auto;
+  height: 750px;
+  width: 1200px;
+  /*background: gray;*/
+}
+
+header
+{
+  height: 200px;
+  background: rgb(13, 77, 242);
+  text-align: center;
+  /*vertical-align: middle;*/
+  line-height: 200px;
+}
+
+.con
+{
+  height: 350px;
+  background: #ffffff;
+}
+
+.con > div
+{
+  float: left;
+  width: 300px;
+  height: 350px;
+  text-align: center;
+}
+
+.con img
+{
+  width: 250px;
+  height: 250px;
+}
+
+.con div .price::before
+{
+  content: "$";
+  color: red;
+}
+
+.con > div .price
+{
+
+}
+
+.con > div input[type="button"]
+{
+  border: 0;
+  color: #ffffff;
+  background: rgb(224, 121, 62);
+}
+
+.con > div input[type="button"]:focus
+{
+  background: rgb(240, 92, 6);
+  border: 0;
+}
+
+footer
+{
+  height: 200px;
+  background: rgb(16, 93, 244);
+}

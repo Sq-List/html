@@ -1,0 +1,22 @@
+body
+{
+  margin: 20px;
+  font: Arial 12px;
+}
+
+#father
+{
+  background: #a0c8ff;
+  border: 1px dashed #000000;
+  padding: 15px;
+}
+
+#son
+{
+  background: #fff0ac;
+  border: 1px dashed #000000;
+  padding: 10px;
+  position: relative;
+  left: 30px;
+  top: 30px;
+}
