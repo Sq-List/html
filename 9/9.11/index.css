@@ -1,9 +1,0 @@
-p
-{
-  /*font-family字体属性*/
-  font-family: "微软雅黑", "Microsoft Yahei";
-  /*font-weight字体粗细 100-900*/
-  font-weight: 100;
-  /*font-size字体的大小 数字或者百分比或者inherit*/
-  font-size: inherit;
-}
