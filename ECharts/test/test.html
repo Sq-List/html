@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="main" style="width: 100%; height: 600px"></div>
+</body>
+<script src="../echarts.js" charset="utf-8"></script>
+<script src="../jquery-3.2.1.min.js" charset="utf-8"></script>
+<script type="text/javascript">
+    var myChart = echarts.init($("#main").get(0));
+
+    myChart.setOption(
+        {
+            title:
+            {
+                text: "test"
+            },
+
+            legend:
+            {
+                data: ['决定因素']
+            },
+
+            grid:
+            {
+
+            },
+
+            // xAxis:['周一', '周二', '周三', '周四', '周五', '周六', '周日'],
+            xAxis:
+            {
+                data: ['天赋', '努力', '兴趣', '交流', '心态', '好学']
+            },
+
+            yAxis:
+            {
+                // data: ['点数']
+                // data: [10, 20, 30, 40]
+            },
+
+            series:
+            [
+                {
+                    name: '决定因素',
+                    type: 'bar',
+                    data: [5, 20, 36, 10, 10, 20]
+                }
+            ]
+        }
+    )
+</script>
+</html>
