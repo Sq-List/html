@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="page">
+        <div class="content main">
+            <div class="refer">
+                <span>789</span>
+                <ul>
+                    <li class="alal">123</li>
+                    <li class="pp">456</li>
+                    ...
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+
+<script>
+    var genCssSelector = function() {
+        // your code here
+        var arg = arguments[0];
+        var stack = [];
+        var parent = arg;
+        while (parent.nodeName != "HTML") {
+            var node = parent.nodeName.toLowerCase();
+            if (parent.id != "") {
+                node += "#" + parent.id;
+            } else if (parent.className != "") {
+                node += "." + parent.className.replace(" ", ".");
+            }
+
+            stack.push(node);
+
+            parent = parent.parentNode;
+        }
+        stack.push("html");
+
+        var ans = "";
+        for (var i = stack.length - 1; i >= 0; i--) {
+            ans += stack[i] + " ";
+        }
+
+        return ans;
+    }
+
+    document.addEventListener('click', function(e) {
+        //点击li时，返回：html body #page .content.main .refer ul li
+        console.log(genCssSelector(e.target));
+    })
+</script>
+
+</html>
